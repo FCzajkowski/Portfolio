@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');:root{
+    --black: #1B1B1B;
+    --gray:#343434;
+    --light-gray:#464748;
+    --white:#F2F3F4;
+    --red:#d81b3a;
+    --normal-font: "Montserrat", sans-serif;
+    --fancy-font: "Playfair Display", serif;
+}
+body{
+    background-color: var(--black);
+    color:var(--white);
+    font-family:var(--normal-font);
+    text-align: center;
+    margin:0;
+}
+header{
+    height:150px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin:30px 100px 30px 100px;
+}
+header p{
+    font-size:50px;
+    text-align: left;
+    font-family: var(--fancy-font);
+}
+
+nav {
+    position: fixed;
+    bottom: 100px; 
+    background-color: var(--black);
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+nav a {
+    font-size: 40px;
+    color:var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+nav a:hover {
+    transform: scale(1.2);
+    color:#f9caff
+}
+
+button{
+    background-color: var(--black);
+    color:var(--white);
+    border:none;
+    border-bottom:1px solid var(--black);
+    padding:10px;
+    cursor:pointer;
+    transition:250ms;
+}
+button:hover{
+    border-bottom:1px solid var(--white)
+}
+button:active{
+    transform: translateY(4px);
+    transition:75ms;
+}
+#container {
+    color: var(--red);
+    font-size: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--red);
+    width: fit-content;
+    margin: 0 auto;
+    font-size:70px;
+    animation: blink 0.8s steps(2, start) infinite;
+}
+white{
+    color:var(--white)
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: var(--red);
+    }
+}
+
+h1 {
+    margin-left: -500px;
+    text-align: left;
+    font-weight: 200;
+    font-size: 70px;
+    margin-top: -200px;
+}
+
+#typing-container {
+    display: flex; /* Keeps static and dynamic text on the same line */
+    align-items: baseline; /* Aligns the dynamic text with the static text */
+}
+
+#static-text {
+    color: white;
+    font-weight: 200;
+}
+
+#dynamic-text {
+    color: var(--red); /* Make it red or any color of your choice */
+    font-weight: 200;
+}
+
+h2{
+    margin-bottom:50px;
+    font-size:60px;
+    font-family: var(--fancy-font);
+    font-weight:200
+}
+section{
+    border-bottom:0.5px solid var(--white);
+}
+#section__1{
+    height:88vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#section__2, #section__3, #section__4{
+    text-align: left;
+    letter-spacing: 1.2px;
+    font-size:20px;
+    padding:200px 0px 200px 0px;
+}
+#section__2 div div{
+    margin:0 100px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+#section__2{
+    text-align: center;
+}
+#section__2 #grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#section div{
+    width:100%;
+    height:100%;
+}
+#section__3{
+    text-align: center;
+}
+.card {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:250ms;
+    margin-top:100px;
+}
+
+.card div {
+    height: 330px;
+    width: 300px;
+    color: white;
+    background-color: var(--gray);
+    border-radius: 10px;
+    transition:250ms;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.card div:hover{
+    transform: rotate(-2deg) scale(1.04);
+    box-shadow:0px 0px 15px var(--light-gray)
+}
+
+.card div img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card div p {
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+#class__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Add spacing between grid items if needed */
+    text-align: center;
+    margin-left:15%;
+    margin-right:15%;
+}
+
+footer{
+    background-color: var(--white);
+    color:black;
+    padding-top:40px;
+    padding-bottom:40px;
+    font-size:20px;
+}
+
+#grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#grid a{
+    text-decoration: none;
+    color:white;
+}
+#grid i{font-size:60px;}
+#programming__icons{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-right:30%;
+    gap: 20px;
+}
+
+#programming__icons a, #programming__icons i a{transition: 250ms;}
+
+  
+#programming__icons i {
+    font-size: 50px; /* default size for icons */
+    transition: transform 0.3s ease, color 0.3s ease; /* smooth effect */
+}
+
+.tech-link {display: inline-block;}
+
+.tech-link:hover i {
+    transform: translateY(-10px); /* makes the icon move up */
+    color: inherit; /* inherits the color of the link, which can be set per technology */
+}
+
+/* Optional: Set specific colors for each technology icon */
+.tech-link[href="https://www.python.org/"]:hover i {color: #306998; /* Python */}
+.tech-link[href="https://www.php.net/"]:hover i {color: #8993be; /* PHP */}
+.tech-link[href="https://www.rust-lang.org/"]:hover i {color: #c55826; /* Rust */}
+.tech-link[href="https://www.latex-project.org/"]:hover i {color: #008080; /* LaTeX */}
+.tech-link[href="https://flask.palletsprojects.com/en/stable/"]:hover i {color: #afd7bd; /* Flask */}
+.tech-link[href="https://www.djangoproject.com/"]:hover i {color: #092e20; /* Django */}
+.tech-link[href="https://pyscript.net/"]:hover i {color: #ff5c8d; /* PyScript */}
+.tech-link[href="https://mariadb.org/"]:hover i {color: #003545; /* MariaDB */}
+.tech-link[href="https://www.mysql.com/"]:hover i {color: #00618a; /* MySQL */}
+.tech-link[href="https://www.postgresql.org"]:hover i {color: #336791; /* PostgreSQL */}
+.tech-link[href="https://www.sqlite.org/"]:hover i {color: #003b49; /* SQLite */}
+.tech-link[href="https://www.jetbrains.com/pycharm/"]:hover i {color: #3ad04e; /* PyCharm */}
+.tech-link[href="https://code.visualstudio.com/"]:hover i {color: #0078d4; /* Visual Studio Code */}
+.tech-link[href="https://www.canva.com/"]:hover i {color: #00c4cc; /* Canva */}
+.tech-link[href="https://www.figma.com/"]:hover i {color: #f24e1e; /* Figma */}
+.tech-link[href="https://github.com/"]:hover i {color: #ce9fd4; /* GitHub */}
+.tech-link[href="https://www.netlify.com/"]:hover i {color: #00c7b7; /* Netlify */}
+i.devicon-html5-plain-wordmark:hover {color: #e34f26; /* HTML */}
+i.devicon-css3-plain-wordmark:hover {color: #1572b6; /* CSS */}
+i.devicon-javascript-plain:hover{color:#c3c925}
+i.devicon-html5-plain-wordmark, i.devicon-css3-plain-wordmark, i.devicon-javascript-plain-wordmark{
+    cursor:pointer;
+}
+/* Light Theme Styles */
+body.light-theme {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+body.light-theme header button {
+    background-color: var(--white);
+    color: var(--black);
+    border-bottom: 1px solid var(--white);
+}
+
+body.light-theme header button:hover {
+    border-bottom: 1px solid var(--black);
+}
+
+body.light-theme footer {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Icon Colors for Light Theme */
+body.light-theme i {
+    color: var(--black);
+}
+body.light-theme nav a{
+    background-color: var(--black);
+    color:var(--white) !important;
+}
+body.light-theme #static-text {
+    color: var(--black);
+}
+
+/* General Mobile Adjustments */
+@media (max-width: 768px) {
+    body {
+        margin: 0 10px;
+        text-align: left;
+    }
+    header {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    header p {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+    #section__2, #section__3, #section__4 {
+        padding: 100px 10px;
+    }
+    #grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    #programming__icons {
+        grid-template-columns: repeat(3, 1fr);
+        margin-right: 0;
+        gap: 10px;
+    }
+    #class__grid {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .card div {
+        width: 90%; /* Scale down card size */
+        height: auto;
+    }
+    .card div img {
+        width: 100%; /* Make images responsive */
+        height: auto;
+    }
+    footer {
+        font-size: 14px;
+        padding: 20px;
+    }
+    /* Adjust margins for all sections */
+    #section__3 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Update grid layout in #section__3 */
+    #programming__icons {
+        grid-template-columns: repeat(2, 1fr); /* Two icons per row */
+        gap: 15px; /* Reduce spacing between items */
+    }
+}
+
+/* Tablet Adjustments */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    #grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #programming__icons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #class__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #section__3 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* Update grid layout in #section__3 */
+    #programming__icons {
+        grid-template-columns: repeat(3, 1fr); /* Three icons per row */
+        gap: 20px;
+    }
+}
