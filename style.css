@@ -373,7 +373,7 @@ body.light-theme #static-text {
 }
 
 /* Tablet Adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
     h1 {
         font-size: 50px;
     }
